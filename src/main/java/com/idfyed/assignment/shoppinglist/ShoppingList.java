@@ -58,7 +58,7 @@ public class ShoppingList {
 	 */
 	public void add(Grocery grocery, Integer noOfGroceries, Unit unit) {
 		ShoppingEntry existing = this.groceries.get(grocery.getName());
-// Is existing null?
+		// Is existing null?
 		if (existing == null) {
 			existing = new ShoppingEntry(grocery);
 		}

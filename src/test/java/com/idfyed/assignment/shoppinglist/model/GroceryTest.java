@@ -15,7 +15,7 @@ public class GroceryTest {
 	}
 
 	@Test
-	public void getNameTest() {
+	public void getFieldsTest() {
 		Grocery apple = new Grocery("apple", GroceryCategory.fruit, Unit.pcs);
 
 		Assert.assertEquals("apple", apple.getName());

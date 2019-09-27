@@ -37,7 +37,6 @@ public class UnitConverter {
 	}
 
 	public int convert(int fromUnitAmount) {
-		// TODO Auto-generated method stub
 		return fromUnitAmount * this.multiply;
 	}
 
