@@ -20,8 +20,8 @@ public class Grocery {
 	public Grocery(String name, GroceryCategory category, Unit unit, UnitConverter... unitConverters) {
 		this.name = name;
 		this.category = category;
-		this.default = unit;
-		this.converters = Array.asList(unitConverters);
+		this.defaultUnit = unit;
+		this.converters = Arrays.asList(unitConverters);
 	}
 
 	public String getName() {

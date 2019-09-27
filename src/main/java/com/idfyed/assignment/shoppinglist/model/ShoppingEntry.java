@@ -39,5 +39,5 @@ public class ShoppingEntry {
 	// ===== INTERNALS ===== //
 	
 	private Grocery grocery;
-	private Int amount;
+	private Integer amount;
 }

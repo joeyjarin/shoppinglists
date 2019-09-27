@@ -32,8 +32,8 @@ public class Recipe {
 	}
 
 	public static void main(String[] args) {
-		Recipe r1 = new Recipe("MyRecipe", new ArrayList<>(), null);
-		Recipe r2 = new Recipe("MyRecipe", new ArrayList<>(), null);
+		Recipe r1 = new Recipe("MyRecipe", new ArrayList<Ingredient>(), null);
+		Recipe r2 = new Recipe("MyRecipe", new ArrayList<Ingredient>(), null);
 		
 		if (r1.getName() == r2.getName()) {
 			System.out.println("Recipes are equal!");
