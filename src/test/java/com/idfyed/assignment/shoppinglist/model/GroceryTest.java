@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 import com.idfyed.assignment.shoppinglist.GroceryStock;
 
-
 public class GroceryTest {
 
 	@Test(expectedExceptions = IllegalArgumentException.class, expectedExceptionsMessageRegExp = "unknown conversion: cl -> pcs")

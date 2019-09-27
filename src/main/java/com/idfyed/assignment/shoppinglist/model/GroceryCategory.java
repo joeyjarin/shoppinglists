@@ -7,7 +7,5 @@ package com.idfyed.assignment.shoppinglist.model;
  * TODO: Write doc
  */
 public enum GroceryCategory {
-		dairy,
-		fruit,
-		flour;
+	dairy, fruit, flour;
 }

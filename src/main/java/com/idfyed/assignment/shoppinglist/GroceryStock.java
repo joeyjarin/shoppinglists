@@ -25,41 +25,36 @@ public class GroceryStock {
 	 * @return
 	 */
 	public static Grocery get(String name) {
-	Grocery grocery = GroceryStock.stock.get(name);
-	// TODO: introduce error handling
-	if (grocery == null) {
-	throw new IllegalArgumentException(name + " not found");
-	}
-	return grocery;
+		Grocery grocery = GroceryStock.stock.get(name);
+		// TODO: introduce error handling
+		if (grocery == null) {
+			throw new IllegalArgumentException(name + " not found");
+		}
+		return grocery;
 	}
 
 	// ===== INTERNALS ===== //
 	private static Map<String, Grocery> stock = new HashMap<>();
 
 	static {
-  Grocery milk = new Grocery("milk", GroceryCategory.dairy, Unit.ml,
-		  new UnitConverter(Unit.pcs, 1000, Unit.ml));
-  Grocery cream = new Grocery("cream", GroceryCategory.dairy, Unit.ml,
-		  new UnitConverter(Unit.pcs, 250, Unit.ml));
-  Grocery apple = new Grocery("apple", GroceryCategory.fruit, Unit.pcs,
-		  new UnitConverter(Unit.pcs, 100, Unit.mg));
-  Grocery oats = new Grocery("oats", GroceryCategory.flour, Unit.ml,
-		  new UnitConverter(Unit.pcs, 1000, Unit.mg));
-  Grocery flour = new Grocery("flour", GroceryCategory.flour, Unit.ml,
-		  new UnitConverter(Unit.pcs, 1000, Unit.mg));
-  Grocery butter = new Grocery("butter", GroceryCategory.dairy, Unit.mg,
-		  new UnitConverter(Unit.pcs, 500, Unit.mg));
-  Grocery salt = new Grocery("salt", GroceryCategory.flour, Unit.ml)  
-  add(milk, cream, apple, oats, flour, butter, salt);
+		Grocery milk = new Grocery("milk", GroceryCategory.dairy, Unit.ml, new UnitConverter(Unit.pcs, 1000, Unit.ml));
+		Grocery cream = new Grocery("cream", GroceryCategory.dairy, Unit.ml, new UnitConverter(Unit.pcs, 250, Unit.ml));
+		Grocery apple = new Grocery("apple", GroceryCategory.fruit, Unit.pcs,
+				new UnitConverter(Unit.pcs, 100, Unit.mg));
+		Grocery oats = new Grocery("oats", GroceryCategory.flour, Unit.ml, new UnitConverter(Unit.pcs, 1000, Unit.mg));
+		Grocery flour = new Grocery("flour", GroceryCategory.flour, Unit.ml,
+				new UnitConverter(Unit.pcs, 1000, Unit.mg));
+		Grocery butter = new Grocery("butter", GroceryCategory.dairy, Unit.mg,
+				new UnitConverter(Unit.pcs, 500, Unit.mg));
+		Grocery salt = new Grocery("salt", GroceryCategory.flour, Unit.ml);
+		add(milk, cream, apple, oats, flour, butter, salt);
 	}
 
 	private static void add(Grocery... groceries) {
 		for (Enumeration<Grocery> groceryEnumerator = new Vector<>(Arrays.asList(groceries))
 				.elements(); groceryEnumerator.hasMoreElements();) {
-			Grocery grocery = groceryEnumerator.nextElement
-		();
-			GroceryStock.stock.put
-		(grocery.getName(), grocery);
+			Grocery grocery = groceryEnumerator.nextElement();
+			GroceryStock.stock.put(grocery.getName(), grocery);
 		}
 	}
 }

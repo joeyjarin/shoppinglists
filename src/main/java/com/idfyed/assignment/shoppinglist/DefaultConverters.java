@@ -10,7 +10,7 @@ import java.util.Map;
 import com.idfyed.assignment.shoppinglist.model.Unit;
 
 /**
- * A collection of converters bewteen units
+ * A collection of converters between units
  */
 public class DefaultConverters {
 
@@ -23,8 +23,7 @@ public class DefaultConverters {
 		UnitConverter converter = DefaultConverters.converters.get(from);
 		if (converter == null) {
 			// BUGBUG: error?
-			throw new IllegalArgumentException(
-				String.format("unknown conversion: %s -> %s", from, to.toString()));
+			throw new IllegalArgumentException(String.format("unknown conversion: %s -> %s", from, to.toString()));
 		}
 		return converter;
 	}
