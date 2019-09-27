@@ -13,7 +13,9 @@ import com.idfyed.assignment.shoppinglist.model.Unit;
  * A collection of converters between units
  */
 public class DefaultConverters {
-
+	private DefaultConverters() {		
+	}
+	
 	public static UnitConverter convert(Unit from, Unit to) {
 
 		// from check

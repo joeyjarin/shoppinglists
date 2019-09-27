@@ -18,6 +18,10 @@ import com.idfyed.assignment.shoppinglist.model.Unit;
  */
 public class GroceryStock {
 
+	private GroceryStock() {
+		// this is to hide implicit public constructor
+	}
+	
 	/**
 	 * Returns a grocery with specified name. IllegalArgument if not
 	 * 
