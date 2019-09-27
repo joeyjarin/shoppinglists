@@ -35,7 +35,6 @@ public class ShoppingList {
 	 * @param ingredient
 	 */
 	public void add(Recipe recipe) {
-// TODO Auto-generated method stub
 		recipe.getIngredients().forEach(this::add);
 	}
 
