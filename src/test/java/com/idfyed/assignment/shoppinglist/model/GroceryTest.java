@@ -7,13 +7,6 @@ import com.idfyed.assignment.shoppinglist.GroceryStock;
 
 public class GroceryTest {
 
-	@Test(expectedExceptions = IllegalArgumentException.class, expectedExceptionsMessageRegExp = "unknown conversion: cl -> pcs")
-	public void getConverterTest() {
-		Grocery apple = new Grocery("apple", GroceryCategory.fruit, Unit.pcs);
-
-		apple.getConverter(Unit.cl, Unit.pcs);
-	}
-
 	@Test
 	public void getFieldsTest() {
 		Grocery apple = new Grocery("apple", GroceryCategory.fruit, Unit.pcs);

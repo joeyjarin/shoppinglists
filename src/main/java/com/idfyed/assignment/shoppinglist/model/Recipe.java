@@ -30,17 +30,6 @@ public class Recipe {
 		return text;
 	}
 
-	public static void main(String[] args) {
-		Recipe r1 = new Recipe("MyRecipe", new ArrayList<>(), null);
-		Recipe r2 = new Recipe("MyRecipe", new ArrayList<>(), null);
-
-		if (r1.getName() == r2.getName()) {
-			System.out.println("Recipes are equal!");
-		} else {
-			System.out.println("Recipes are not equal!");
-		}
-	}
-
 	// ===== INTERNALS ===== //
 
 	private String string;

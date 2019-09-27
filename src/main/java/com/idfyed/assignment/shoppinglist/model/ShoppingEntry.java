@@ -26,7 +26,6 @@ public class ShoppingEntry {
 		try {
 			this.amount += grocery.getConverter(from, this.grocery.getUnit()).convert(amount);
 		} catch (NullPointerException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
