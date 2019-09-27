@@ -19,7 +19,6 @@ public class Recipe {
 	}
 
 	public String getName() {
-		// TODO Auto-generated method stub
 		return string;
 	}
 
