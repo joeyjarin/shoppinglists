@@ -7,9 +7,12 @@ public class ShopTest {
 
 	@Test
 	public void constructor() {
-		Shop target = new Shop("acme", 43);
+		int id = 43;
+		String name = "acme";
+		
+		Shop target = new Shop(name, id);
 
-		Assert.assertEquals(target.getName(), "acme");
-		Assert.assertEquals(target.getId(), 42);
+		Assert.assertEquals(target.getName(), name);
+		Assert.assertEquals(target.getId(), id);
 	}
 }

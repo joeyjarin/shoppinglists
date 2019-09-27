@@ -22,16 +22,14 @@ public class IntegrationTest {
 	@Test
 	public void testAll() {
 		Recipe pie = new Recipe("pie",
-				Arrays.asList(
-						new Ingredient(200, Unit.ml, GroceryStock.get("flour")),
+				Arrays.asList(new Ingredient(200, Unit.ml, GroceryStock.get("flour")),
 						new Ingredient(300, Unit.ml, GroceryStock.get("oats")),
 						new Ingredient(2, Unit.pcs, GroceryStock.get("apple")),
 						new Ingredient(5, Unit.ml, GroceryStock.get("salt")),
 						new Ingredient(100, Unit.mg, GroceryStock.get("butter"))),
 				"Apple pie");
 		Recipe bread = new Recipe("Levain bread",
-				Arrays.asList(
-						new Ingredient(750, Unit.ml, GroceryStock.get("flour")),
+				Arrays.asList(new Ingredient(750, Unit.ml, GroceryStock.get("flour")),
 						new Ingredient(50, Unit.mg, GroceryStock.get("butter")),
 						new Ingredient(3, Unit.tbsp, GroceryStock.get("salt"))),
 				"Bread");

@@ -10,7 +10,7 @@ public class Shop {
 
 	Shop(String name, int id) {
 		this.name = name;
-		// this.id = id; //TODO: monitor this line
+		this.id = id;
 	}
 
 	public String getName() {
