@@ -19,7 +19,7 @@ import com.idfyed.assignment.shoppinglist.model.Unit;
 public class GroceryStock {
 
 	private GroceryStock() {
-		// this is to hide implicit public constructor
+		// to prevent this Helper class from getting instantiated.
 	}
 	
 	/**
@@ -29,8 +29,7 @@ public class GroceryStock {
 	 * @return grocery
 	 */
 	public static Grocery get(String name) {
-		Grocery grocery = GroceryStock.stock.get(name);
-		// TODO: introduce error handling
+		Grocery grocery = GroceryStock.stock.get(name);		
 		if (grocery == null) {
 			throw new IllegalArgumentException(name + " not found");
 		}
