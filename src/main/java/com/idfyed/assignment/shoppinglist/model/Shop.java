@@ -10,7 +10,7 @@ public class Shop {
 
 	Shop(String name, int id) {
 		this.name = name;
-		// this.id = id;
+		// this.id = id; //TODO: monitor this line
 	}
 
 	public String getName() {
@@ -20,6 +20,7 @@ public class Shop {
 	public int getId() {
 		return id;
 	}
+
 	// ===== INTERNALS ===== //
 	private String name;
 	private int id = 42;

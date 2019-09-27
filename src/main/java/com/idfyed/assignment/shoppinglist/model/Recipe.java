@@ -11,7 +11,7 @@ import java.util.List;
  *
  */
 public class Recipe {
-	
+
 	public Recipe(String name, List<Ingredient> ingredients, String description) {
 		this.string = name;
 		this.list = ingredients;
@@ -32,18 +32,18 @@ public class Recipe {
 	}
 
 	public static void main(String[] args) {
-		Recipe r1 = new Recipe("MyRecipe", new ArrayList<Ingredient>(), null);
-		Recipe r2 = new Recipe("MyRecipe", new ArrayList<Ingredient>(), null);
-		
+		Recipe r1 = new Recipe("MyRecipe", new ArrayList<>(), null);
+		Recipe r2 = new Recipe("MyRecipe", new ArrayList<>(), null);
+
 		if (r1.getName() == r2.getName()) {
 			System.out.println("Recipes are equal!");
 		} else {
-			System.out.println("Recipes are not equal!");			
+			System.out.println("Recipes are not equal!");
 		}
 	}
-	
+
 	// ===== INTERNALS ===== //
-	
+
 	private String string;
 	private List<Ingredient> list;
 	private String text;

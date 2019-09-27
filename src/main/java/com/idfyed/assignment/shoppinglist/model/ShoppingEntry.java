@@ -16,12 +16,11 @@ public class ShoppingEntry {
 		return grocery;
 	}
 
-
 	/**
 	 * Adds to this entry, converting to target unit.
 	 * 
 	 * @param amount The amount to add.
-	 * @param from The unit of the added amount.
+	 * @param from   The unit of the added amount.
 	 */
 	public void add(Integer amount, Unit from) {
 		try {
@@ -37,7 +36,7 @@ public class ShoppingEntry {
 	}
 
 	// ===== INTERNALS ===== //
-	
+
 	private Grocery grocery;
 	private Integer amount;
 }
