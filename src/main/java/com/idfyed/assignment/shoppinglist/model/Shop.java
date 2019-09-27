@@ -8,9 +8,13 @@ package com.idfyed.assignment.shoppinglist.model;
  */
 public class Shop {
 
+	Shop(String name) {
+		this.name = name;
+	}
+	
 	Shop(String name, int id) {
 		this.name = name;
-		// this.id = id;
+		 this.id = id;
 	}
 
 	public String getName() {
@@ -23,5 +27,5 @@ public class Shop {
 
 	// ===== INTERNALS ===== //
 	private String name;
-	private int id = 42;
+	private int id = 42; //default value?
 }
