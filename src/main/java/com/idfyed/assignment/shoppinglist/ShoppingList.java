@@ -45,7 +45,6 @@ public class ShoppingList {
 	 * @param grocery
 	 */
 	public void add(Ingredient ingredient) {
-// TODO Auto-generated method stub
 		add(ingredient.getGrocery(), ingredient.getAmount(), ingredient.getUnit());
 	}
 
@@ -71,7 +70,7 @@ public class ShoppingList {
 	 * Fetches one shopping list entry of a specified name. null if not found
 	 * 
 	 * @param groceryName
-	 * @return
+	 * @return shoppingEntry
 	 */
 	public ShoppingEntry get(String groceryName) {
 		return this.groceries.get(groceryName);
@@ -81,14 +80,14 @@ public class ShoppingList {
 	 * Returns Grocery
 	 * 
 	 * @param category
-	 * @return
+	 * @return shoppingEntry collection
 	 */
 	public Collection<ShoppingEntry> getPerCategory(GroceryCategory category) {
 		return this.groceries.values().stream().filter(g -> category.equals(g.getGrocery().getCategory()))
 				.collect(Collectors.toCollection(ArrayList::new));
 	}
-// ===== INTRENALS ===== //
-
+	
+	// ===== INTRENALS ===== //
 	private Map<String, ShoppingEntry> groceries = new HashMap<>();
 
 }

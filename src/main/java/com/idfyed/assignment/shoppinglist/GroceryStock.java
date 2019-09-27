@@ -22,7 +22,7 @@ public class GroceryStock {
 	 * Returns a grocery with specified name. IllegalArgument if not
 	 * 
 	 * @param name
-	 * @return
+	 * @return grocery
 	 */
 	public static Grocery get(String name) {
 		Grocery grocery = GroceryStock.stock.get(name);

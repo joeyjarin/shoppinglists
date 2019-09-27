@@ -3,7 +3,6 @@
  */
 package com.idfyed.assignment.shoppinglist.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

@@ -4,7 +4,7 @@
 package com.idfyed.assignment.shoppinglist.model;
 
 /**
- * 
+ * An abstraction of a shop.
  */
 public class Shop {
 
