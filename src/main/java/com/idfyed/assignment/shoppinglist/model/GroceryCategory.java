@@ -4,7 +4,7 @@
 package com.idfyed.assignment.shoppinglist.model;
 
 /**
- * TODO: Write doc
+ * Grocery categories that can be used.
  */
 public enum GroceryCategory {
 	dairy, fruit, flour;

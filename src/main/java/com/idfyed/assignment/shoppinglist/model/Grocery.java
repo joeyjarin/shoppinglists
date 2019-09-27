@@ -49,7 +49,6 @@ public class Grocery {
 	 * @return A converter, or {@link IllegalArgumentException} if not found.
 	 */
 	public UnitConverter getConverter(Unit from, Unit to) {
-
 		ListIterator<UnitConverter> converterIter = this.converters.listIterator();
 		while (converterIter.hasNext()) {
 			UnitConverter next = converterIter.next();
