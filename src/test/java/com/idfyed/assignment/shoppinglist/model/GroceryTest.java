@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.idfyed.assignment.shoppinglist.GroceryStock;
+import com.idfyed.assignment.shoppinglist.exceptions.ItemNotFoundException;
 
 public class GroceryTest {
 
@@ -14,7 +15,11 @@ public class GroceryTest {
 		Assert.assertEquals("apple", apple.getName());
 		Assert.assertEquals(GroceryCategory.fruit, apple.getCategory());
 		Assert.assertEquals("apple", apple.getName());
-		Assert.assertEquals(GroceryStock.get("apple"), apple);
+		try {
+			Assert.assertEquals(GroceryStock.get("apple"), apple);
+		} catch (ItemNotFoundException e) {
+			Assert.fail();
+		}
 
 	}
 }

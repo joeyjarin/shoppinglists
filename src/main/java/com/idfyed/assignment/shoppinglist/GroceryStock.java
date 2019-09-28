@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
 
+import com.idfyed.assignment.shoppinglist.exceptions.ItemNotFoundException;
 import com.idfyed.assignment.shoppinglist.model.Grocery;
 import com.idfyed.assignment.shoppinglist.model.GroceryCategory;
 import com.idfyed.assignment.shoppinglist.model.Unit;
@@ -27,11 +28,12 @@ public class GroceryStock {
 	 * 
 	 * @param name
 	 * @return grocery
+	 * @throws ItemNotFoundException 
 	 */
-	public static Grocery get(String name) {
+	public static Grocery get(String name) throws ItemNotFoundException {
 		Grocery grocery = GroceryStock.stock.get(name);		
 		if (grocery == null) {
-			throw new IllegalArgumentException(name + " not found");
+			throw new ItemNotFoundException(name + " not found");
 		}
 		return grocery;
 	}
