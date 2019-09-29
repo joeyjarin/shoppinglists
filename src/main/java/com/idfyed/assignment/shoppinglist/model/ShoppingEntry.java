@@ -16,18 +16,16 @@ public class ShoppingEntry {
 		return grocery;
 	}
 
-
 	/**
 	 * Adds to this entry, converting to target unit.
 	 * 
 	 * @param amount The amount to add.
-	 * @param from The unit of the added amount.
+	 * @param from   The unit of the added amount.
 	 */
 	public void add(Integer amount, Unit from) {
 		try {
 			this.amount += grocery.getConverter(from, this.grocery.getUnit()).convert(amount);
 		} catch (NullPointerException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -37,7 +35,7 @@ public class ShoppingEntry {
 	}
 
 	// ===== INTERNALS ===== //
-	
+
 	private Grocery grocery;
-	private Int amount;
+	private int amount;
 }

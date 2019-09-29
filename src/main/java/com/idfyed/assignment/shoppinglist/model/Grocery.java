@@ -20,8 +20,8 @@ public class Grocery {
 	public Grocery(String name, GroceryCategory category, Unit unit, UnitConverter... unitConverters) {
 		this.name = name;
 		this.category = category;
-		this.default = unit;
-		this.converters = Array.asList(unitConverters);
+		this.defaultUnit = unit;
+		this.converters = Arrays.asList(unitConverters);
 	}
 
 	public String getName() {
@@ -49,7 +49,6 @@ public class Grocery {
 	 * @return A converter, or {@link IllegalArgumentException} if not found.
 	 */
 	public UnitConverter getConverter(Unit from, Unit to) {
-
 		ListIterator<UnitConverter> converterIter = this.converters.listIterator();
 		while (converterIter.hasNext()) {
 			UnitConverter next = converterIter.next();
@@ -60,6 +59,7 @@ public class Grocery {
 		return DefaultConverters.convert(from, to);
 	}
 
+	
 	@Override
 	public boolean equals(Object objIn) {
 		if (objIn == null) {

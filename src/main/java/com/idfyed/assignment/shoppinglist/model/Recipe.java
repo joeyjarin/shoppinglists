@@ -3,7 +3,6 @@
  */
 package com.idfyed.assignment.shoppinglist.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,7 +10,7 @@ import java.util.List;
  *
  */
 public class Recipe {
-	
+
 	public Recipe(String name, List<Ingredient> ingredients, String description) {
 		this.string = name;
 		this.list = ingredients;
@@ -19,7 +18,6 @@ public class Recipe {
 	}
 
 	public String getName() {
-		// TODO Auto-generated method stub
 		return string;
 	}
 
@@ -31,19 +29,8 @@ public class Recipe {
 		return text;
 	}
 
-	public static void main(String[] args) {
-		Recipe r1 = new Recipe("MyRecipe", new ArrayList<>(), null);
-		Recipe r2 = new Recipe("MyRecipe", new ArrayList<>(), null);
-		
-		if (r1.getName() == r2.getName()) {
-			System.out.println("Recipes are equal!");
-		} else {
-			System.out.println("Recipes are not equal!");			
-		}
-	}
-	
 	// ===== INTERNALS ===== //
-	
+
 	private String string;
 	private List<Ingredient> list;
 	private String text;

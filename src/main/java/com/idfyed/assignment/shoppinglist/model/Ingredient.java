@@ -17,8 +17,6 @@ public class Ingredient {
 	}
 
 	public Ingredient(Ingredient ingredient) {
-
-		// FIXME:
 		this.amount = ingredient.getAmount();
 		this.unit = ingredient.getUnit();
 		this.grocery = ingredient.getGrocery();
@@ -37,7 +35,6 @@ public class Ingredient {
 	}
 
 	// /////INTERNALS ///// //
-
 	private int amount;
 	private Unit unit;
 	private Grocery grocery;

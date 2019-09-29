@@ -4,25 +4,22 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.idfyed.assignment.shoppinglist.GroceryStock;
-
+import com.idfyed.assignment.shoppinglist.exceptions.ItemNotFoundException;
 
 public class GroceryTest {
 
-	@Test(expectedExceptions = IllegalArgumentException.class, expectedExceptionsMessageRegExp = "unknown conversion: cl -> pcs")
-	public void getConverterTest() {
-		Grocery apple = new Grocery("apple", GroceryCategory.fruit, Unit.pcs);
-
-		apple.getConverter(Unit.cl, Unit.pcs);
-	}
-
 	@Test
-	public void getNameTest() {
+	public void getFieldsTest() {
 		Grocery apple = new Grocery("apple", GroceryCategory.fruit, Unit.pcs);
 
 		Assert.assertEquals("apple", apple.getName());
 		Assert.assertEquals(GroceryCategory.fruit, apple.getCategory());
 		Assert.assertEquals("apple", apple.getName());
-		Assert.assertEquals(GroceryStock.get("apple"), apple);
+		try {
+			Assert.assertEquals(GroceryStock.get("apple"), apple);
+		} catch (ItemNotFoundException e) {
+			Assert.fail();
+		}
 
 	}
 }
